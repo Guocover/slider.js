@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+    <title>slider test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="section">
+        <h3 class="section-title">Demo1</h3>
+        <div class="guide-slider">
+            <ul class="guide-slider-list">
+                <li class="guide-slider-item z-selected" data-index="0">item1</li>
+                <li class="guide-slider-item" data-index="1">item2</li>
+                <li class="guide-slider-item" data-index="2">item3</li>
+                <li class="guide-slider-item" data-index="3">item4</li>
+                <li class="guide-slider-item" data-index="4">item5</li>
+                <li class="guide-slider-item" data-index="5">item6</li>
+            </ul>
+            <i class="guide-slider-curIcon"></i>
+        </div>
+    </div>
+    <div class="section">
+        <h3 class="section-title">Demo2</h3>
+        <div id="container1" class="content-wrapper">
+            <div id="list1" class="guide-content-list">
+                <div class="guide-item-content">
+                    <div class="content">1</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">2</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">3</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">4</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">5</div>
+                </div>
+              
+            </div>    
+        </div>
+       
+    </div>   
+
+
+    <div class="section">
+        <h3 class="section-title">Demo3</h3>
+        <div id="container2" class="content-wrapper">
+            <div id="list2" class="guide-content-list">
+                <div class="guide-item-content">
+                    <div class="content">1</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">2</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">3</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">4</div>
+                </div>
+                <div class="guide-item-content">
+                    <div class="content">5</div>
+                </div>
+              
+            </div>    
+        </div>
+       
+    </div>  
+
+
+</body>
+<script src='./lib/zepto.min.js'></script>
+<script src='./lib/mod.js'></script>
+<script src='./src/slider.js'></script>
+<script>
+    var Slider = require('slider');
+    //滑动1
+    var Slider0 = Slider.init({
+        container: '.guide-slider',
+        sliderElem: '.guide-slider-list',
+        startPos: 0,
+        speed:600,
+        after: function(index) {
+            //设置选择的item为z-active， 效果是字体变黑
+            $('.guide-slider-item').eq(index).addClass('z-selected').siblings().removeClass('z-selected');
+        }
+    });
+    $('.guide-slider-item').on('click', function(){
+        var index = $(this).index();
+        Slider0.move(index);
+    });
+
+    //滑动2
+    var Slider1 = Slider.init({
+        container: '#container1',
+        sliderElem: '#list1',
+        startPos: 0,
+        speed:600,
+        realTimeSliding: false, //设置不实时滑动
+        after: function(index) {
+        }
+    });
+
+    //滑动3
+    var Slider2 = Slider.init({
+        container: '#container2',
+        sliderElem: '#list2',
+        startPos: 0,
+        speed:600,
+        // realTimeSliding: false, //设置不实时滑动
+        after: function(index) {
+           $('.guide-item-content').eq(index).addClass('guide-item-content-active');
+        }
+    });
+
+
+</script>
+</html>

@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,
+li {
+    list-style: none;
+}
+body{
+    font-family: '微软雅黑';
+    font-size: 16px;
+}
+.section {
+    margin-top: 20px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+
+    font-weight: normal;
+    text-align: center;
+
+    color: #333;
+}
+
+
+.guide-slider {
+    overflow: hidden;
+
+    position: relative;
+    z-index: 10;
+
+    border-bottom: 1px solid #c8c7cc;
+    width: 100%;
+    height: 46px;
+
+    font-size: 14px;
+    line-height: 46px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.guide-slider:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    border-top: 1px solid #c8c7cc;
+    width: 100%;
+
+    content: "";
+}
+
+.guide-slider:after {
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    z-index: 2;
+
+    margin-left: -2px;
+    border: 1px solid #c8c7cc;
+    width: 5px;
+    height: 5px;
+
+    background: #fff;
+
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    content: "";
+}
+
+.guide-slider-list {
+    display: -webkit-box;
+    display:         box;
+    overflow: hidden;
+
+    position: relative;
+    left: 40.6%;
+
+    width: 120%;
+    height: 100%;
+}
+
+.guide-slider-item {
+    -webkit-box-flex: 1;
+
+    position: relative;
+
+    width: 1%;
+    height: 100%;
+
+    text-align: center;
+
+    color: #777;
+
+            box-flex: 1;
+}
+
+.guide-slider-item.z-selected {
+    color: #000;
+}
+
+.guide-slider-item.z-selected:after {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+
+    margin-left: -2px;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+
+    background-color: #a7e2fe;
+
+    content: "";
+}
+
+
+.content-wrapper{
+    overflow: hidden;
+    position: relative;
+    background: #c8c7cc;
+}
+
+.guide-content-list {
+    display:         box;
+    display: -webkit-box;
+
+    border-top: 1px solid #c8c7cc;
+    border-bottom: 1px solid #c8c7cc;
+    width: 500%;
+
+    -webkit-transition: all .8s;
+            transition: all .8s;
+    /*解决小米2 transfrom时页面闪烁问题*/
+
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+.guide-item-content {
+    -webkit-box-flex: 1;
+
+    width: 100%;
+    height: 120px;
+    background: #77e291;
+
+}
+
+.content {
+    margin: 25px auto;
+    width: 60px;
+    height: 60px;
+
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+
+    color: #fff;
+    
+}
+
+.guide-item-content:nth-child(2){
+    background: #aee24a;
+}
+.guide-item-content:nth-child(3){
+    background: #30c8ca;
+}
+.guide-item-content:nth-child(4){
+    background: #e24a9d;
+}
+.guide-item-content:nth-child(5){
+    background: #dc4e2c;
+}
+
