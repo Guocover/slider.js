@@ -1,10 +1,10 @@
-##intro
+## intro
 slider.js a lightweight mobile terminal sliding component, which is only 200 lines
 
-##demo
+## demo
 
 
-##usage
+## usage
 ```html
 <!--the html of slider-->
  <div class="slider">
@@ -34,7 +34,7 @@ var slider = Slider.init({
 ```
 
 
-##Api & Opts
+## Api & Opts
 the default opt
 ```javascript
  var defaults = {
@@ -46,7 +46,7 @@ the default opt
 };
 ```
 
-####Slider.init(opts)
+#### Slider.init(opts)
 - @param  Object opts  - the options of slider
 ```javascript
 //demo.js
@@ -57,7 +57,7 @@ var slider = Slider.init({
 
 ```
 
-####Slider.translate($target, dist, speed)
+#### Slider.translate($target, dist, speed)
 - @param  Object target - the target of slide
 - @param  Object dist - the distance of slide
 - @param  Object speed - the speed of transition duration
@@ -72,16 +72,16 @@ Slider.translate(target, distance , speed);
 
 ----
 the instance method
-####slider.move(index, speed, noCb)
+#### slider.move(index, speed, noCb)
 - @param  Object index- 【necessary】the index of slide
 - @param  Object speed - 【unnecessary】 the speed
 - @param  Object noCb-  【unnecessary】 don't need the afterCallback
 
 
-####slider.getCurPos()
+#### slider.getCurPos()
 - @return Number  index
 
-####slider.getOpts()
+#### slider.getOpts()
 - @return Object opts
 
 
