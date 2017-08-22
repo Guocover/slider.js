@@ -2,7 +2,7 @@
 slider.js a lightweight mobile terminal sliding component, which is only 200 lines
 
 ## demo
-
+http://guocover.github.io/slider.js/demo.html
 
 ## usage
 ```html
